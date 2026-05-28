@@ -6,115 +6,166 @@
   <title>Agência Digital | Cesar Libarino</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
           colors: {
             agency: {
-              bg: '#050505',
+              bg: '#030303',
               card: '#ffffff',
-              cardMuted: '#f8f9fa',
-              textPrimary: '#111827',
-              textSecondary: '#4b5563',
-              border: '#e5e7eb',
+              cardMuted: '#f9fafb',
+              textPrimary: '#0f172a',
+              textSecondary: '#475569',
+              accent: '#2563eb',
+              accentHover: '#1d4ed8'
             }
           }
         }
       }
     }
   </script>
+  <style>
+    .glow-bg {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1400px;
+      height: 600px;
+      background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.12) 0%, rgba(37, 99, 235, 0) 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
 </head>
-<body class="bg-agency-bg text-gray-300 font-sans antialiased">
+<body class="bg-agency-bg text-slate-300 font-sans antialiased relative selection:bg-blue-500 selection:text-white">
+
+  <!-- Efeito de Luz de Fundo -->
+  <div class="glow-bg"></div>
+
+  <!-- NAVBAR PREMIUM -->
+  <nav class="border-b border-slate-900 bg-agency-bg/80 backdrop-blur-md sticky top-0 z-50 transition-all">
+    <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-bold text-white text-sm">
+          CL
+        </div>
+        <span class="text-white font-bold tracking-tight text-sm uppercase">Cesar Libarino</span>
+      </div>
+      <a href="https://calendar.app.google/znE1EU63FpjsWEvT7" target="_blank" class="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 text-white hover:bg-slate-800 px-4 py-2 rounded-xl font-medium text-xs tracking-wide uppercase transition-all">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        Consultoria Livre
+      </a>
+    </div>
+  </nav>
 
   <!-- HERO SECTION -->
-  <header class="max-w-5xl mx-auto px-6 pt-24 pb-16">
-    <h1 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
-      Agência para experts e profissionais liberais
+  <header class="max-w-5xl mx-auto px-6 pt-24 pb-20 relative z-10 text-center md:text-left">
+    <span class="inline-flex items-center gap-1.5 bg-blue-500/10 text-blue-400 text-xs font-semibold px-3 py-1.5 rounded-full mb-5 border border-blue-500/20 uppercase tracking-wider">
+      <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Ecossistema High Ticket & Low Ticket
+    </span>
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight leading-[1.15] max-w-4xl">
+      Agência de Estratégia para <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-400">Experts e Profissionais Liberais</span>
     </h1>
-    <p class="text-lg text-gray-400 max-w-3xl leading-relaxed">
-      Do zero ao funil completo — páginas profissionais, tráfego pago estratégico e criação do seu infoproduto do roteiro à venda.
+    <p class="text-base md:text-lg text-slate-400 max-w-2xl leading-relaxed">
+      Do zero ao funil completo — desenvolvemos suas páginas profissionais, tráfego pago de alta intenção e a estruturação do seu produto digital do roteiro à venda.
     </p>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 space-y-20 pb-24">
+  <main class="max-w-5xl mx-auto px-6 space-y-24 pb-32 relative z-10">
 
     <!-- SITES E PÁGINAS DE CAPTAÇÃO -->
     <section>
-      <h2 class="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-6">Sites e Páginas de Captação</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="h-px bg-gradient-to-r from-blue-500/50 to-transparent w-12"></div>
+        <h2 class="text-xs font-bold tracking-widest text-slate-500 uppercase">01. Sites e Páginas de Captação</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
         <!-- Pacote Essencial -->
-        <div class="bg-agency-card rounded-2xl p-8 border border-agency-border shadow-sm flex flex-col">
-          <div class="flex items-center gap-3 mb-4 text-agency-textPrimary">
-            <i data-lucide="layout-template" class="w-6 h-6"></i>
-            <h3 class="text-xl font-semibold">Pacote Essencial</h3>
+        <div class="bg-agency-card rounded-2xl p-8 border border-slate-200 shadow-sm flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-12 h-12 rounded-xl bg-slate-50 text-agency-textPrimary flex items-center justify-center border border-slate-100 transition-colors group-hover:bg-blue-50 group-hover:text-blue-600">
+              <i data-lucide="layout" class="w-5 h-5"></i>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-2.5 py-1 rounded-md">Início Rápido</span>
           </div>
-          <p class="text-agency-textSecondary text-sm mb-6">Para quem já tem hospedagem e quer começar rápido</p>
           
-          <div class="mb-8">
-            <span class="text-3xl font-bold text-agency-textPrimary">R$ 150</span><span class="text-agency-textPrimary font-semibold">,00</span>
-            <p class="text-xs text-agency-textSecondary mt-1">Taxa única</p>
+          <h3 class="text-2xl font-bold text-agency-textPrimary mb-2">Pacote Essencial</h3>
+          <p class="text-agency-textSecondary text-sm mb-6 leading-relaxed">Ideal para quem já possui domínio e hospedagem contratados e busca execução ágil.</p>
+          
+          <div class="mb-8 border-t border-b border-slate-100 py-4 flex items-baseline gap-1">
+            <span class="text-sm font-medium text-slate-400">R$</span>
+            <span class="text-4xl font-extrabold text-agency-textPrimary tracking-tight">150</span>
+            <span class="text-sm font-semibold text-agency-textSecondary">,00</span>
+            <span class="text-xs text-slate-400 ml-2">/ Taxa única</span>
           </div>
 
-          <ul class="space-y-4 mb-8 flex-1">
+          <ul class="space-y-4 flex-1 mb-2">
             <li class="flex items-start gap-3 text-sm text-agency-textSecondary">
-              <i data-lucide="check" class="w-4 h-4 text-gray-400 mt-0.5 shrink-0"></i>
-              <span>Página configurada conforme prévia</span>
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"></i>
+              <span>Página configurada e idêntica à prévia</span>
             </li>
             <li class="flex items-start gap-3 text-sm text-agency-textSecondary">
-              <i data-lucide="check" class="w-4 h-4 text-gray-400 mt-0.5 shrink-0"></i>
-              <span>Instalação no domínio do cliente</span>
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"></i>
+              <span>Instalação limpa no domínio do cliente</span>
             </li>
             <li class="flex items-start gap-3 text-sm text-agency-textSecondary">
-              <i data-lucide="check" class="w-4 h-4 text-gray-400 mt-0.5 shrink-0"></i>
-              <span>Entrega pronta para uso</span>
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"></i>
+              <span>Entrega e homologação pronta para uso</span>
             </li>
-            <li class="flex items-start gap-3 text-sm text-agency-textSecondary">
-              <i data-lucide="check" class="w-4 h-4 text-gray-400 mt-0.5 shrink-0"></i>
-              <span>Hospedagem por conta do cliente</span>
-            </li>
-            <li class="flex items-start gap-3 text-sm text-agency-textSecondary">
-              <i data-lucide="check" class="w-4 h-4 text-gray-400 mt-0.5 shrink-0"></i>
-              <span>Sem alterações após entrega</span>
+            <li class="flex items-start gap-3 text-sm text-slate-400 italic">
+              <i data-lucide="alert-circle" class="w-4 h-4 text-amber-500 mt-0.5 shrink-0"></i>
+              <span>Hospedagem por conta do cliente / sem alterações pós-entrega</span>
             </li>
           </ul>
         </div>
 
         <!-- Pacote Profissional -->
-        <div class="bg-agency-card rounded-2xl p-8 border border-agency-border shadow-lg relative flex flex-col ring-2 ring-blue-500/20">
-          <div class="absolute top-8 right-8 text-blue-500">
-            <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+        <div class="bg-agency-card rounded-2xl p-8 border border-blue-100 shadow-md relative flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ring-4 ring-blue-500/5 group">
+          <div class="absolute top-6 right-6">
+            <span class="bg-blue-600 text-white text-[10px] font-extrabold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-sm">
+              Mais Solicitado
+            </span>
           </div>
-          <div class="mb-4">
-            <span class="inline-block bg-blue-50 text-blue-600 text-xs font-semibold px-3 py-1 rounded-full mb-3">Mais popular</span>
-            <h3 class="text-xl font-semibold text-agency-textPrimary">Pacote Profissional</h3>
-          </div>
-          <p class="text-agency-textSecondary text-sm mb-6">Zero preocupação técnica, suporte e hospedagem inclusos</p>
           
-          <div class="mb-8">
-            <span class="text-3xl font-bold text-agency-textPrimary">R$ 250</span><span class="text-agency-textPrimary font-semibold">,00</span>
-            <p class="text-xs text-agency-textSecondary mt-1">Taxa única anual</p>
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-md shadow-blue-500/20">
+              <i data-lucide="globe" class="w-5 h-5"></i>
+            </div>
+          </div>
+          
+          <h3 class="text-2xl font-bold text-agency-textPrimary mb-2">Pacote Profissional</h3>
+          <p class="text-agency-textSecondary text-sm mb-6 leading-relaxed">Infraestrutura completa. Cuidamos de toda a barreira técnica para você focar no negócio.</p>
+          
+          <div class="mb-8 border-t border-b border-slate-100 py-4 flex items-baseline gap-1">
+            <span class="text-sm font-medium text-slate-400">R$</span>
+            <span class="text-4xl font-extrabold text-agency-textPrimary tracking-tight">250</span>
+            <span class="text-sm font-semibold text-agency-textSecondary">,00</span>
+            <span class="text-xs text-slate-400 ml-2">/ Anual</span>
           </div>
 
-          <ul class="space-y-4 mb-8 flex-1">
+          <ul class="space-y-4 flex-1 mb-2">
             <li class="flex items-start gap-3 text-sm text-agency-textSecondary">
-              <i data-lucide="check" class="w-4 h-4 text-blue-500 mt-0.5 shrink-0"></i>
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mt-0.5 shrink-0"></i>
               <span>Página configurada conforme prévia</span>
             </li>
             <li class="flex items-start gap-3 text-sm text-agency-textSecondary">
-              <i data-lucide="check" class="w-4 h-4 text-blue-500 mt-0.5 shrink-0"></i>
-              <span>Instalação em servidor premium</span>
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mt-0.5 shrink-0"></i>
+              <span>Instalação e otimização em servidor Premium</span>
             </li>
-            <li class="flex items-start gap-3 text-sm font-medium text-agency-textPrimary">
-              <i data-lucide="check" class="w-4 h-4 text-blue-500 mt-0.5 shrink-0"></i>
-              <span>1 ano de hospedagem inclusa</span>
+            <li class="flex items-start gap-3 text-sm font-semibold text-agency-textPrimary">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"></i>
+              <span>1 Ano de Hospedagem Inclusa</span>
             </li>
             <li class="flex items-start gap-3 text-sm text-agency-textSecondary">
-              <i data-lucide="check" class="w-4 h-4 text-blue-500 mt-0.5 shrink-0"></i>
-              <span>Alterações por 30 dias (textos, cores, fotos)</span>
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600 mt-0.5 shrink-0"></i>
+              <span>Garantia de alterações de texto/fotos por 30 dias</span>
             </li>
           </ul>
         </div>
@@ -124,54 +175,70 @@
 
     <!-- GESTÃO DE TRÁFEGO PAGO -->
     <section>
-      <h2 class="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-6">Gestão de Tráfego Pago</h2>
+      <div class="flex items-center gap-3 mb-8">
+        <div class="h-px bg-gradient-to-r from-blue-500/50 to-transparent w-12"></div>
+        <h2 class="text-xs font-bold tracking-widest text-slate-500 uppercase">02. Gestão de Tráfego Pago</h2>
+      </div>
       
-      <div class="bg-agency-card rounded-2xl p-8 md:p-10 border border-agency-border shadow-sm">
-        <div class="flex items-center gap-3 mb-4 text-agency-textPrimary">
-          <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
-          <h3 class="text-xl font-semibold">Meta Ads — Instagram e Facebook</h3>
+      <div class="bg-agency-card rounded-2xl p-8 md:p-12 border border-slate-200 shadow-sm transition-all duration-300 hover:shadow-xl">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 pb-6 border-b border-slate-100">
+          <div class="flex items-center gap-4 text-agency-textPrimary">
+            <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center border border-indigo-100">
+              <i data-lucide="trending-up" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold tracking-tight">Meta Ads Comercial</h3>
+              <p class="text-xs text-slate-400 font-medium">Instagram & Facebook Ads direcionados</p>
+            </div>
+          </div>
+          <span class="self-start md:self-center bg-indigo-50 text-indigo-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-100 uppercase tracking-wider">
+            Foco em Conversão Local
+          </span>
         </div>
         
-        <p class="text-agency-textSecondary text-sm md:text-base leading-relaxed mb-8 max-w-4xl">
-          Execução completa para atrair clientes prontos para comprar no mercado local. Cuidamos de tudo: estratégia, criação dos anúncios, rastreamento e alinhamento do WhatsApp para transformar lead em cliente.
+        <p class="text-agency-textSecondary text-sm md:text-base leading-relaxed mb-8 max-w-3xl">
+          Atração qualificada de leads prontos para fechar negócio. Dominamos desde o mapeamento estratégico da oferta local, passando pela criação dos criativos de alta conversão, até o tracking inteligente e o alinhamento de scripts de recepção no WhatsApp.
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-          <ul class="space-y-4">
-            <li class="flex items-start gap-3 text-sm text-agency-textSecondary">
-              <i data-lucide="target" class="w-4 h-4 text-gray-400 mt-0.5 shrink-0"></i>
-              <span>Análise do público e definição de oferta</span>
-            </li>
-            <li class="flex items-start gap-3 text-sm text-agency-textSecondary">
-              <i data-lucide="message-circle" class="w-4 h-4 text-gray-400 mt-0.5 shrink-0"></i>
-              <span>Alinhamento de abordagem no WhatsApp</span>
-            </li>
-            <li class="flex items-start gap-3 text-sm text-agency-textSecondary">
-              <i data-lucide="copyplus" class="w-4 h-4 text-gray-400 mt-0.5 shrink-0"></i>
-              <span>Até 4 anúncios novos por semana</span>
-            </li>
-          </ul>
-          <ul class="space-y-4">
-            <li class="flex items-start gap-3 text-sm text-agency-textSecondary">
-              <i data-lucide="sliders-horizontal" class="w-4 h-4 text-gray-400 mt-0.5 shrink-0"></i>
-              <span>Criação e otimização de campanhas</span>
-            </li>
-            <li class="flex items-start gap-3 text-sm text-agency-textSecondary">
-              <i data-lucide="code" class="w-4 h-4 text-gray-400 mt-0.5 shrink-0"></i>
-              <span>Pixel e API de rastreamento</span>
-            </li>
-          </ul>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 text-sm text-agency-textSecondary">
+              <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+              <span>Análise profunda de público e esteira de oferta</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-agency-textSecondary">
+              <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+              <span>Desenho de abordagem estratégica no WhatsApp</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-agency-textSecondary">
+              <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+              <span>Desenvolvimento de até 4 novos criativos semanais</span>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 text-sm text-agency-textSecondary">
+              <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+              <span>Otimização diária de orçamentos e campanhas</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-agency-textSecondary">
+              <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+              <span>Configuração avançada de Pixel e API de Conversão</span>
+            </div>
+          </div>
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-4">
-          <div class="bg-agency-cardMuted rounded-xl p-5 border border-agency-border/60 flex-1">
-            <span class="text-xs text-agency-textSecondary uppercase tracking-wider font-medium block mb-1">Plano Mensal</span>
-            <span class="text-2xl font-bold text-agency-textPrimary">R$ 800<span class="text-sm font-normal text-agency-textSecondary">/mês</span></span>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+          <div class="bg-agency-cardMuted rounded-xl p-6 border border-slate-100 hover:border-slate-300 transition-colors">
+            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Fee Mensal</span>
+            <span class="text-3xl font-extrabold text-agency-textPrimary tracking-tight">R$ 800<span class="text-sm font-normal text-slate-400 tracking-normal"> /mês</span></span>
           </div>
-          <div class="bg-agency-cardMuted rounded-xl p-5 border border-agency-border/60 flex-1">
-            <span class="text-xs text-agency-textSecondary uppercase tracking-wider font-medium block mb-1">Plano Trimestral</span>
-            <span class="text-2xl font-bold text-agency-textPrimary block">R$ 2.000</span>
-            <span class="text-xs text-agency-textSecondary">À vista ou parcelado no cartão</span>
+          <div class="bg-agency-cardMuted rounded-xl p-6 border border-slate-100 hover:border-slate-300 transition-colors">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[10px] font-bold text-indigo-600 uppercase tracking-widest block">Fee Trimestral</span>
+              <span class="text-[9px] bg-indigo-100 text-indigo-700 font-bold px-2 py-0.5 rounded">Desconto</span>
+            </div>
+            <span class="text-3xl font-extrabold text-agency-textPrimary tracking-tight block">R$ 2.000</span>
+            <span class="text-xs text-slate-400">À vista ou parcelado em cartão de crédito</span>
           </div>
         </div>
       </div>
@@ -179,67 +246,111 @@
 
     <!-- CRIAÇÃO DE INFOPRODUTO -->
     <section>
-      <h2 class="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-6">Criação de Infoproduto e Funil de Vendas</h2>
+      <div class="flex items-center gap-3 mb-8">
+        <div class="h-px bg-gradient-to-r from-blue-500/50 to-transparent w-12"></div>
+        <h2 class="text-xs font-bold tracking-widest text-slate-500 uppercase">03. Criação de Infoproduto</h2>
+      </div>
       
-      <div class="bg-agency-card rounded-2xl p-8 md:p-10 border border-agency-border shadow-sm">
-        <span class="inline-block bg-green-50 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">Feito com você, do zero</span>
+      <div class="bg-agency-card rounded-2xl p-8 md:p-12 border border-slate-200 shadow-sm relative overflow-hidden transition-all duration-300 hover:shadow-xl">
+        <div class="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-blue-600 to-indigo-500"></div>
         
-        <div class="flex items-center gap-3 mb-4 text-agency-textPrimary">
-          <i data-lucide="package" class="w-6 h-6"></i>
-          <h3 class="text-xl font-semibold">Pacote Infoproduto Completo</h3>
+        <div class="flex items-center gap-4 text-agency-textPrimary mb-6">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-100">
+            <i data-lucide="layers" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold tracking-tight">Coprodução & Estrutura de Infoprodutos</h3>
+            <p class="text-xs text-slate-400 font-medium">Lançamento e Funis de Perpetuo</p>
+          </div>
         </div>
         
-        <p class="text-agency-textSecondary text-sm md:text-base leading-relaxed mb-8 max-w-4xl">
-          Você tem o conhecimento, a gente transforma em produto digital e monta toda a estrutura para vender. Nossa equipe cuida de cada etapa — você só precisa aparecer e gravar.
+        <p class="text-agency-textSecondary text-sm md:text-base leading-relaxed mb-10 max-w-3xl">
+          Sua expertise transformada em um produto escalável. Cuidamos do mapeamento lógico, engenharia do funil e suporte de ponta a ponta. Você só entra com o conhecimento e a gravação; nós executamos o resto.
         </p>
 
-        <div class="space-y-6 mb-10">
-          <div class="flex items-start gap-4">
-            <div class="w-6 h-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</div>
-            <p class="text-sm text-agency-textSecondary"><strong class="text-agency-textPrimary">Roteiro e estrutura do curso</strong> — criamos o conteúdo junto com você, organizando o que você já sabe em módulos e aulas.</p>
+        <!-- Timeline Verticall -->
+        <div class="space-y-8 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-slate-100 mb-10">
+          
+          <div class="flex gap-4 relative">
+            <div class="w-7 h-7 rounded-full bg-blue-50 border-4 border-white text-blue-600 flex items-center justify-center text-xs font-bold shrink-0 z-10 shadow-sm">1</div>
+            <div>
+              <h4 class="text-sm font-bold text-agency-textPrimary">Arquitetura de Roteiro & Grade Curricular</h4>
+              <p class="text-xs text-agency-textSecondary mt-0.5 leading-relaxed">Estruturação modular das aulas para assegurar retenção, clareza e alta taxa de conclusão dos alunos.</p>
+            </div>
           </div>
-          <div class="flex items-start gap-4">
-            <div class="w-6 h-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</div>
-            <p class="text-sm text-agency-textSecondary"><strong class="text-agency-textPrimary">Edição e produção</strong> — nossa equipe edita tudo e deixa o material com qualidade profissional.</p>
+          
+          <div class="flex gap-4 relative">
+            <div class="w-7 h-7 rounded-full bg-blue-50 border-4 border-white text-blue-600 flex items-center justify-center text-xs font-bold shrink-0 z-10 shadow-sm">2</div>
+            <div>
+              <h4 class="text-sm font-bold text-agency-textPrimary">Direção de Produção & Edição Profissional</h4>
+              <p class="text-xs text-agency-textSecondary mt-0.5 leading-relaxed">Tratamento audiovisual premium focado em dinamismo, identidade visual e autoridade de marca.</p>
+            </div>
           </div>
-          <div class="flex items-start gap-4">
-            <div class="w-6 h-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</div>
-            <p class="text-sm text-agency-textSecondary"><strong class="text-agency-textPrimary">Publicação na plataforma</strong> — configuramos e subimos o curso (Hotmart, Kiwify ou similar).</p>
+
+          <div class="flex gap-4 relative">
+            <div class="w-7 h-7 rounded-full bg-blue-50 border-4 border-white text-blue-600 flex items-center justify-center text-xs font-bold shrink-0 z-10 shadow-sm">3</div>
+            <div>
+              <h4 class="text-sm font-bold text-agency-textPrimary">Configuração e Integração com Plataformas VOD</h4>
+              <p class="text-xs text-agency-textSecondary mt-0.5 leading-relaxed">Deploy, cadastro de ofertas, áreas de membros customizadas e checkout seguro (Kiwify, Hotmart, etc.).</p>
+            </div>
           </div>
-          <div class="flex items-start gap-4">
-            <div class="w-6 h-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">4</div>
-            <p class="text-sm text-agency-textSecondary"><strong class="text-agency-textPrimary">Página de vendas</strong> — criamos uma página otimizada para converter visitante em aluno.</p>
+
+          <div class="flex gap-4 relative">
+            <div class="w-7 h-7 rounded-full bg-blue-50 border-4 border-white text-blue-600 flex items-center justify-center text-xs font-bold shrink-0 z-10 shadow-sm">4</div>
+            <div>
+              <h4 class="text-sm font-bold text-agency-textPrimary">Landing Page de Vendas & Copywriting Direto</h4>
+              <p class="text-xs text-agency-textSecondary mt-0.5 leading-relaxed">Páginas de alta velocidade carregadas com narrativa persuasiva construída exclusivamente para conversão rápida.</p>
+            </div>
           </div>
-          <div class="flex items-start gap-4">
-            <div class="w-6 h-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">5</div>
-            <p class="text-sm text-agency-textSecondary"><strong class="text-agency-textPrimary">Funil de e-mail</strong> — sequência automatizada para nutrir leads e aumentar as vendas.</p>
+
+          <div class="flex gap-4 relative">
+            <div class="w-7 h-7 rounded-full bg-blue-50 border-4 border-white text-blue-600 flex items-center justify-center text-xs font-bold shrink-0 z-10 shadow-sm">5</div>
+            <div>
+              <h4 class="text-sm font-bold text-agency-textPrimary">Automações de E-mail Marketing & Recuperação</h4>
+              <p class="text-xs text-agency-textSecondary mt-0.5 leading-relaxed">Fluxos automáticos inteligentes para carrinhos abandonados, pix gerados e boleto em aberto.</p>
+            </div>
           </div>
+
         </div>
 
-        <div class="bg-agency-cardMuted rounded-xl p-5 border border-agency-border/60 flex items-center gap-3">
-          <i data-lucide="calendar" class="w-5 h-5 text-gray-400"></i>
-          <p class="text-sm text-agency-textSecondary">Investimento definido conforme o escopo do seu projeto — conversamos em uma reunião rápida.</p>
+        <div class="bg-blue-50/50 rounded-xl p-5 border border-blue-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <i data-lucide="help-circle" class="w-5 h-5 text-blue-600 shrink-0"></i>
+            <p class="text-xs text-agency-textSecondary font-medium">Orçamentos sob medida dependendo da complexidade do projeto e do ecossistema desejado.</p>
+          </div>
+          <a href="https://calendar.app.google/znE1EU63FpjsWEvT7" target="_blank" class="text-xs font-bold text-blue-600 hover:text-blue-800 shrink-0 inline-flex items-center gap-1">
+            Consultar escopo <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- SOBRE O ESTRATEGISTA -->
-    <section class="border-t border-gray-800 pt-16">
-      <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
-        <img 
-          src="photo_2026-02-19_20-08-11.jpg" 
-          alt="Cesar Libarino" 
-          class="w-48 h-48 md:w-56 md:h-56 object-cover rounded-3xl shadow-xl rotate-2 hover:rotate-0 transition-transform duration-300 ring-4 ring-gray-900"
-        />
+    <section class="border-t border-slate-900 pt-20 relative">
+      <div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-agency-bg px-4 text-slate-800 text-sm font-mono">// STRATEGIST PROFILE</div>
+      
+      <div class="flex flex-col md:flex-row items-center gap-12 max-w-4xl mx-auto">
+        <div class="relative shrink-0">
+          <div class="absolute inset-0 bg-blue-600 rounded-3xl blur-md opacity-20 scale-95 transition-transform duration-500 group-hover:scale-105"></div>
+          <img 
+            src="photo_2026-02-19_20-08-11.jpg" 
+            alt="Cesar Libarino" 
+            class="w-52 h-52 md:w-60 md:h-60 object-cover rounded-3xl relative z-10 border border-slate-800 shadow-2xl"
+          />
+        </div>
+        
         <div class="flex-1 text-center md:text-left">
-          <h2 class="text-2xl font-bold text-white mb-2">Quem está nos bastidores</h2>
-          <h3 class="text-blue-500 font-medium mb-6">Cesar Libarino • Estrategista Digital</h3>
-          <p class="text-gray-400 leading-relaxed mb-6">
-            Especializado na engenharia de funis de vendas de *low ticket*, *copywriting* de resposta direta e gestão avançada de tráfego pago. Meu foco é pegar o seu conhecimento como expert ou profissional liberal e transformá-lo em um ecossistema de vendas previsível e lucrativo.
+          <span class="text-xs font-bold tracking-widest text-blue-500 uppercase block mb-1">Nos Bastidores</span>
+          <h2 class="text-3xl font-extrabold text-white mb-2 tracking-tight">Cesar Libarino</h2>
+          <p class="text-slate-500 text-xs font-medium mb-6">Estrategista Digital & Especialista em Funis de Conversão</p>
+          
+          <p class="text-slate-400 text-sm leading-relaxed mb-8 max-w-xl">
+            Atuo diretamente no desenvolvimento e otimização de funis de vendas de resposta direta, infraestrutura técnica para infoprodutos e gestão profissional de tráfego pago. Minha missão é construir ecossistemas previsíveis que convertem cliques em faturamento real para prestadores de serviço e infoprodutores.
           </p>
-          <a href="#" class="inline-flex items-center gap-2 bg-white text-black hover:bg-gray-200 px-6 py-3 rounded-lg font-semibold text-sm transition-colors">
-            <i data-lucide="calendar-clock" class="w-4 h-4"></i>
-            Agendar Reunião de Alinhamento
+          
+          <a href="https://calendar.app.google/znE1EU63FpjsWEvT7" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:from-blue-500 hover:to-blue-400 px-7 py-3.5 rounded-xl font-bold text-sm tracking-wide shadow-lg shadow-blue-600/10 transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            Agendar Reunião Estratégica
           </a>
         </div>
       </div>
@@ -247,8 +358,13 @@
 
   </main>
 
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-950 bg-[#020202] py-8 text-center text-xs text-slate-600">
+    <p>&copy; 2026 Cesar Libarino. Todos os direitos reservados.</p>
+  </footer>
+
   <script>
-    // Inicializa os ícones do Lucide
+    // Ativação dos ícones dinâmicos
     lucide.createIcons();
   </script>
 </body>
